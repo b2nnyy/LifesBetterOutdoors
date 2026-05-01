@@ -83,7 +83,6 @@ html {
   -webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
-  overflow-x: clip;
 }
 
 body {
@@ -97,8 +96,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  overflow-x: clip;
   overflow-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
 }
 
 img, svg, video { max-width: 100%; display: block; }
@@ -282,8 +281,11 @@ p { margin: 0 0 var(--sp-4); color: var(--color-ink-soft); }
   text-align: center;
   white-space: normal;
   max-width: 100%;
+  touch-action: manipulation;
 }
-.btn:hover { transform: translateY(-1px); }
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover { transform: translateY(-1px); }
+}
 .btn:active { transform: translateY(0); }
 .btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
 
@@ -323,15 +325,25 @@ p { margin: 0 0 var(--sp-4); color: var(--color-ink-soft); }
   top: 0;
   z-index: 50;
   padding-top: env(safe-area-inset-top, 0px);
-  background: rgba(251, 250, 247, 0.85);
-  backdrop-filter: saturate(180%) blur(12px);
-  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  /* Solid bar on touch — avoids iOS Safari backdrop-filter repaint glitches */
+  background: rgba(251, 250, 247, 0.98);
   border-bottom: 1px solid transparent;
   transition: border-color var(--t-med) var(--ease-out), background-color var(--t-med) var(--ease-out);
 }
 .site-header.is-scrolled {
   border-bottom-color: var(--color-line);
-  background: rgba(251, 250, 247, 0.95);
+  background: var(--color-bg);
+}
+@media (hover: hover) and (pointer: fine) {
+  .site-header {
+    background: rgba(251, 250, 247, 0.85);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+  }
+  .site-header.is-scrolled {
+    background: rgba(251, 250, 247, 0.95);
+    border-bottom-color: var(--color-line);
+  }
 }
 
 .nav {
@@ -399,6 +411,7 @@ p { margin: 0 0 var(--sp-4); color: var(--color-ink-soft); }
   border: 0;
   width: 40px; height: 40px;
   position: relative;
+  touch-action: manipulation;
 }
 .nav-toggle span {
   display: block;
@@ -424,10 +437,10 @@ p { margin: 0 0 var(--sp-4); color: var(--color-ink-soft); }
     position: fixed;
     top: calc(var(--header-h) + env(safe-area-inset-top, 0px));
     right: 0;
-    bottom: env(safe-area-inset-bottom, 0px);
+    bottom: 0;
     left: 0;
     background: var(--color-bg);
-    transform: translateY(-100%);
+    transform: translate3d(0, -100%, 0);
     transition: transform var(--t-med) var(--ease-out);
     z-index: 49;
     padding: var(--sp-8) var(--sp-6);
@@ -436,8 +449,10 @@ p { margin: 0 0 var(--sp-4); color: var(--color-ink-soft); }
     flex-direction: column;
     gap: var(--sp-2);
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
   }
-  .mobile-menu.is-open { transform: translateY(0); }
+  .mobile-menu.is-open { transform: translate3d(0, 0, 0); }
   .mobile-menu a {
     display: block;
     font-family: var(--font-serif);
@@ -463,7 +478,7 @@ p { margin: 0 0 var(--sp-4); color: var(--color-ink-soft); }
 .hero {
   position: relative;
   padding-block: clamp(var(--sp-16), 12vw, var(--sp-32));
-  overflow-x: clip;
+  overflow-x: hidden;
   overflow-y: visible;
 }
 .hero-grid {
@@ -551,11 +566,17 @@ p { margin: 0 0 var(--sp-4); color: var(--color-ink-soft); }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-accent-dark);
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.92);
   padding: 4px 10px;
   border-radius: 999px;
-  backdrop-filter: blur(6px);
   font-weight: 600;
+}
+@media (hover: hover) and (pointer: fine) {
+  .photo .photo-tag {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
 }
 
 /* -----------------------------------------------
@@ -593,10 +614,12 @@ p { margin: 0 0 var(--sp-4); color: var(--color-ink-soft); }
   padding: var(--sp-8);
   transition: transform var(--t-med) var(--ease-out), box-shadow var(--t-med) var(--ease-out), border-color var(--t-med) var(--ease-out);
 }
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--color-line-strong);
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-line-strong);
+  }
 }
 .card .icon {
   width: 44px; height: 44px;
@@ -619,7 +642,9 @@ p { margin: 0 0 var(--sp-4); color: var(--color-ink-soft); }
   flex-direction: column;
   transition: transform var(--t-med) var(--ease-out), box-shadow var(--t-med) var(--ease-out);
 }
-.service-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+@media (hover: hover) and (pointer: fine) {
+  .service-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+}
 .service-card .photo { aspect-ratio: 4 / 3; }
 .service-card-body { padding: var(--sp-6); }
 .service-card h3 { font-size: var(--fs-20); margin-bottom: var(--sp-2); }
@@ -673,7 +698,9 @@ p { margin: 0 0 var(--sp-4); color: var(--color-ink-soft); }
   transition: opacity var(--t-med) var(--ease-out), transform var(--t-med) var(--ease-out);
 }
 .gallery-item .photo { transition: transform 600ms var(--ease-out); }
-.gallery-item:hover .photo { transform: scale(1.04); }
+@media (hover: hover) and (pointer: fine) {
+  .gallery-item:hover .photo { transform: scale(1.04); }
+}
 .gallery-item.is-hidden {
   display: none;
 }
@@ -690,7 +717,9 @@ p { margin: 0 0 var(--sp-4); color: var(--color-ink-soft); }
   transition: opacity var(--t-med) var(--ease-out);
   text-align: left;
 }
-.gallery-item:hover .gallery-overlay { opacity: 1; }
+@media (hover: hover) and (pointer: fine) {
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+}
 .gallery-item .gallery-overlay .title {
   font-family: var(--font-serif);
   font-size: var(--fs-18);
@@ -719,7 +748,7 @@ p { margin: 0 0 var(--sp-4); color: var(--color-ink-soft); }
   opacity: 0;
   transition: opacity var(--t-med) var(--ease-out);
 }
-.lightbox.is-open { display: flex; opacity: 1; }
+.lightbox.is-open { display: flex; opacity: 1; overscroll-behavior: contain; }
 .lightbox-figure {
   position: relative;
   width: min(90vw, 1100px);
@@ -1118,6 +1147,14 @@ p { margin: 0 0 var(--sp-4); color: var(--color-ink-soft); }
   opacity: 1;
   transform: translateY(0);
 }
+/* Touch / coarse pointers: skip scroll-reveal (fixes invisible content + compositor jank on iOS) */
+@media (hover: none), (pointer: coarse) {
+  .fade-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -1152,6 +1189,7 @@ p { margin: 0 0 var(--sp-4); color: var(--color-ink-soft); }
 ----------------------------------------------- */
 .login-gate-page {
   min-height: 100vh;
+  min-height: -webkit-fill-available;
   display: grid;
   place-items: center;
   padding: var(--sp-8);

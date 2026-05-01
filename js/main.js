@@ -7,6 +7,12 @@
 (function () {
   'use strict';
 
+  const setScrollLock = (locked) => {
+    const v = locked ? 'hidden' : '';
+    document.documentElement.style.overflow = v;
+    document.body.style.overflow = v;
+  };
+
   /* -------------------------------------------------
      Header scroll state
   ------------------------------------------------- */
@@ -29,14 +35,14 @@
       navToggle.classList.remove('is-open');
       mobileMenu.classList.remove('is-open');
       navToggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+      setScrollLock(false);
     };
     navToggle.addEventListener('click', () => {
       const open = !navToggle.classList.contains('is-open');
       navToggle.classList.toggle('is-open', open);
       mobileMenu.classList.toggle('is-open', open);
       navToggle.setAttribute('aria-expanded', String(open));
-      document.body.style.overflow = open ? 'hidden' : '';
+      setScrollLock(open);
     });
     mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
     window.addEventListener('resize', () => {
@@ -50,10 +56,22 @@
   const reveal = () => {
     const els = document.querySelectorAll('.fade-up');
     if (!els.length) return;
+
+    const nearViewport = (el) => {
+      const r = el.getBoundingClientRect();
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      return r.top < vh + 120 && r.bottom > -80;
+    };
+
     if (!('IntersectionObserver' in window)) {
       els.forEach(el => el.classList.add('is-visible'));
       return;
     }
+
+    els.forEach(el => {
+      if (nearViewport(el)) el.classList.add('is-visible');
+    });
+
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -61,8 +79,11 @@
           io.unobserve(e.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    els.forEach(el => io.observe(el));
+    }, { threshold: 0.01, rootMargin: '0px 0px 64px 0px' });
+
+    els.forEach(el => {
+      if (!el.classList.contains('is-visible')) io.observe(el);
+    });
   };
   reveal();
 
@@ -125,12 +146,12 @@
         renderItem(i);
         lightbox.classList.add('is-open');
         lightbox.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
+        setScrollLock(true);
       };
       const close = () => {
         lightbox.classList.remove('is-open');
         lightbox.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
+        setScrollLock(false);
       };
 
       items.forEach((it, idx) => {
