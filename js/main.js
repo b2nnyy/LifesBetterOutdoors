@@ -254,4 +254,17 @@
   ------------------------------------------------- */
   const yearEl = document.querySelector('[data-year]');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* -------------------------------------------------
+     Sign out (client session only)
+  ------------------------------------------------- */
+  document.querySelectorAll('[data-sign-out]').forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      try {
+        sessionStorage.removeItem('lbo_auth_v1');
+      } catch (err) {}
+      location.href = 'login.html';
+    });
+  });
 })();
