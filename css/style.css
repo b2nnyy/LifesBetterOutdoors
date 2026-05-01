@@ -1,6 +1,6 @@
 /* ==========================================================================
    LifesBetterOutdoors — Design System
-   Modern & minimal, warm wood accents
+   Fresh greens + serif headlines (client preview build)
    ========================================================================== */
 
 /* -----------------------------------------------
@@ -8,23 +8,23 @@
 ----------------------------------------------- */
 :root {
   /* Color */
-  --color-bg:           #FBFAF7;   /* warm off-white */
+  --color-bg:           #F4F7F5;
   --color-surface:      #FFFFFF;
-  --color-surface-alt:  #F3F1EC;   /* light warm gray */
-  --color-ink:          #14110F;   /* near black, slight warmth */
-  --color-ink-soft:     #4A453F;
-  --color-muted:        #807A72;
-  --color-line:         #E5E1D8;
-  --color-line-strong:  #C9C2B5;
-  --color-accent:       #8A6A45;   /* warm wood */
-  --color-accent-dark:  #6E5234;
-  --color-accent-soft:  #E8DDC9;
-  --color-success:      #2F6B3A;
+  --color-surface-alt:  #E9EFE9;
+  --color-ink:          #142018;
+  --color-ink-soft:     #3D4A40;
+  --color-muted:        #6B776E;
+  --color-line:         #D5DED8;
+  --color-line-strong:  #B9C6BE;
+  --color-accent:       #2F6D4F;
+  --color-accent-dark:  #235240;
+  --color-accent-soft:  #CDE5D8;
+  --color-success:      #25603A;
   --color-error:        #B43B2C;
 
   /* Typography */
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-serif: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Young Serif', 'Georgia', serif;
 
   --fs-12: 0.75rem;
   --fs-14: 0.875rem;
@@ -64,9 +64,9 @@
   --t-slow: 600ms;
 
   /* Shadow */
-  --shadow-sm: 0 1px 2px rgba(20, 17, 15, 0.04), 0 1px 1px rgba(20, 17, 15, 0.03);
-  --shadow-md: 0 6px 20px rgba(20, 17, 15, 0.06), 0 2px 6px rgba(20, 17, 15, 0.04);
-  --shadow-lg: 0 24px 60px rgba(20, 17, 15, 0.10), 0 6px 20px rgba(20, 17, 15, 0.06);
+  --shadow-sm: 0 1px 2px rgba(20, 36, 28, 0.05), 0 1px 1px rgba(20, 36, 28, 0.04);
+  --shadow-md: 0 8px 24px rgba(20, 36, 28, 0.07), 0 2px 8px rgba(20, 36, 28, 0.05);
+  --shadow-lg: 0 28px 64px rgba(20, 36, 28, 0.11), 0 8px 24px rgba(20, 36, 28, 0.06);
 
   /* Header height for sticky offsets */
   --header-h: 76px;
@@ -108,8 +108,8 @@ h1, h2, h3, h4, h5 {
   color: var(--color-ink);
 }
 
-h1 { font-size: clamp(var(--fs-40), 6vw, var(--fs-72)); font-weight: 400; letter-spacing: -0.02em; }
-h2 { font-size: clamp(var(--fs-32), 4.5vw, var(--fs-56)); font-weight: 400; letter-spacing: -0.02em; }
+h1 { font-size: clamp(var(--fs-40), 6vw, var(--fs-72)); font-weight: 400; letter-spacing: -0.03em; }
+h2 { font-size: clamp(var(--fs-32), 4.5vw, var(--fs-56)); font-weight: 400; letter-spacing: -0.025em; }
 h3 { font-size: clamp(var(--fs-24), 3vw, var(--fs-32)); }
 h4 { font-size: var(--fs-20); }
 
@@ -143,6 +143,23 @@ p { margin: 0 0 var(--sp-4); color: var(--color-ink-soft); }
 }
 .section-dark h1, .section-dark h2, .section-dark h3 { color: var(--color-bg); }
 .section-dark p { color: rgba(251, 250, 247, 0.75); }
+
+/* Client preview strip */
+.preview-banner {
+  margin: 0;
+  padding: var(--sp-3) clamp(var(--sp-4), 4vw, var(--sp-12));
+  font-family: var(--font-sans);
+  font-size: var(--fs-14);
+  line-height: 1.45;
+  text-align: center;
+  color: var(--color-ink-soft);
+  background: linear-gradient(90deg, var(--color-accent-soft) 0%, #E8F4EE 50%, var(--color-accent-soft) 100%);
+  border-bottom: 1px solid var(--color-line);
+}
+.preview-banner strong {
+  font-weight: 700;
+  color: var(--color-ink);
+}
 
 .eyebrow {
   display: inline-block;
@@ -417,7 +434,7 @@ p { margin: 0 0 var(--sp-4); color: var(--color-ink-soft); }
   position: absolute;
   inset: 0;
   background-image:
-    repeating-linear-gradient(45deg, rgba(138, 106, 69, 0.05) 0 1px, transparent 1px 14px);
+    repeating-linear-gradient(45deg, rgba(47, 109, 79, 0.06) 0 1px, transparent 1px 14px);
   pointer-events: none;
 }
 .photo .photo-mark {
@@ -740,7 +757,7 @@ p { margin: 0 0 var(--sp-4); color: var(--color-ink-soft); }
   position: absolute;
   inset: auto -20% -40% auto;
   width: 480px; height: 480px;
-  background: radial-gradient(circle, rgba(138,106,69,0.35) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(47, 109, 79, 0.35) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -783,7 +800,7 @@ p { margin: 0 0 var(--sp-4); color: var(--color-ink-soft); }
 .field textarea:focus {
   outline: none;
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 4px rgba(138, 106, 69, 0.12);
+  box-shadow: 0 0 0 4px rgba(47, 109, 79, 0.14);
 }
 .field input::placeholder, .field textarea::placeholder { color: var(--color-muted); }
 
@@ -895,8 +912,8 @@ p { margin: 0 0 var(--sp-4); color: var(--color-ink-soft); }
   border-radius: var(--radius-lg);
   background:
     linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 50%),
-    repeating-linear-gradient(90deg, rgba(138,106,69,0.06) 0 1px, transparent 1px 60px),
-    repeating-linear-gradient(0deg, rgba(138,106,69,0.06) 0 1px, transparent 1px 60px),
+    repeating-linear-gradient(90deg, rgba(47, 109, 79, 0.07) 0 1px, transparent 1px 60px),
+    repeating-linear-gradient(0deg, rgba(47, 109, 79, 0.07) 0 1px, transparent 1px 60px),
     var(--color-surface-alt);
   display: flex; align-items: center; justify-content: center;
   color: var(--color-muted);

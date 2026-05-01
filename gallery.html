@@ -5,15 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="js/auth-gate.js"></script>
   <title>Gallery — LifesBetterOutdoors</title>
-  <meta name="description" content="A look at recent pergola installations by LifesBetterOutdoors." />
-  <meta name="theme-color" content="#FBFAF7" />
+  <meta name="description" content="Gallery placeholder — real LifesBetterOutdoors projects will appear here after photo intake." />
+  <meta name="theme-color" content="#F4F7F5" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&amp;family=Young+Serif&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  <p class="preview-banner" role="status"><strong>Client preview.</strong> Layout and structure only — final copy, photos, service area, and business details will be added after LifesBetterOutdoors provides materials.</p>
 
   <!-- ======================= HEADER ======================= -->
   <header class="site-header">
@@ -54,98 +56,25 @@
     <section class="page-hero">
       <div class="container">
         <span class="eyebrow fade-up">Gallery</span>
-        <h1 class="fade-up" style="--delay: 60ms;">Recent pergola installations.</h1>
+        <h1 class="fade-up" style="--delay: 60ms;">Photos will load here.</h1>
         <p class="fade-up" style="--delay: 120ms;">
-          A selection of homes, restaurants, and commercial spaces we've designed and built.
-          Use the filters to browse by project type, and click any project to see it full-size.
+          This preview doesn't include fabricated projects or implied install locations.
+          Filters and lightbox behavior will return once LifesBetterOutdoors supplies real imagery and captions.
         </p>
       </div>
     </section>
 
-    <!-- ======================= GALLERY ======================= -->
+    <!-- ======================= PLACEHOLDER ======================= -->
     <section class="section">
       <div class="container">
-
-        <div class="gallery-controls fade-up" role="tablist" aria-label="Filter projects">
-          <button class="gallery-filter is-active" data-filter="all">All</button>
-          <button class="gallery-filter" data-filter="residential">Residential</button>
-          <button class="gallery-filter" data-filter="restaurant">Restaurants</button>
-          <button class="gallery-filter" data-filter="commercial">Commercial</button>
-          <button class="gallery-filter" data-filter="custom">Custom</button>
+        <div class="card fade-up" style="max-width: 720px; margin: 0 auto;">
+          <h3 style="margin-bottom: var(--sp-4);">What we'll need from you to ship this page</h3>
+          <ul style="margin: 0; padding-left: 1.25rem; color: var(--color-ink-soft); line-height: 1.75;">
+            <li>High-resolution photos with clear usage rights</li>
+            <li>Optional titles and captions — accurate only; no invented geography</li>
+            <li>How you want projects grouped for filters (e.g. residential / restaurant / commercial / custom)</li>
+          </ul>
         </div>
-
-        <!--
-          Each gallery item:
-            data-category: residential | restaurant | commercial | custom
-            data-title: project title
-            data-tag: short label shown on the thumbnail badge
-          To swap the placeholder for a real photo, replace the inner <div class="photo">…</div>
-          with an <img src="…" alt="…" /> tag.
-        -->
-        <div class="gallery-grid" data-gallery>
-
-          <button class="gallery-item fade-up" data-category="residential" data-title="Backyard Retreat — Cedar"   data-tag="Project 01">
-            <div class="photo"><span class="photo-tag">Project 01</span><svg class="photo-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 18 56 18"/><path d="M12 18 12 50"/><path d="M52 18 52 50"/><path d="M22 22 22 50"/><path d="M32 22 32 50"/><path d="M42 22 42 50"/></svg></div>
-            <div class="gallery-overlay"><span class="title">Backyard Retreat</span><span class="meta">Residential</span></div>
-          </button>
-
-          <button class="gallery-item fade-up" style="--delay:60ms" data-category="restaurant" data-title="Patio Dining Room — Steel"  data-tag="Project 02">
-            <div class="photo"><span class="photo-tag">Project 02</span><svg class="photo-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 18 56 18"/><path d="M12 18 12 50"/><path d="M52 18 52 50"/><path d="M22 22 22 50"/><path d="M32 22 32 50"/><path d="M42 22 42 50"/></svg></div>
-            <div class="gallery-overlay"><span class="title">Patio Dining Room</span><span class="meta">Restaurant</span></div>
-          </button>
-
-          <button class="gallery-item fade-up" style="--delay:120ms" data-category="residential" data-title="Poolside Shade — Aluminum" data-tag="Project 03">
-            <div class="photo"><span class="photo-tag">Project 03</span><svg class="photo-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 18 56 18"/><path d="M12 18 12 50"/><path d="M52 18 52 50"/><path d="M22 22 22 50"/><path d="M32 22 32 50"/><path d="M42 22 42 50"/></svg></div>
-            <div class="gallery-overlay"><span class="title">Poolside Shade</span><span class="meta">Residential</span></div>
-          </button>
-
-          <button class="gallery-item fade-up" data-category="commercial" data-title="Hotel Courtyard"           data-tag="Project 04">
-            <div class="photo"><span class="photo-tag">Project 04</span><svg class="photo-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 18 56 18"/><path d="M12 18 12 50"/><path d="M52 18 52 50"/><path d="M22 22 22 50"/><path d="M32 22 32 50"/><path d="M42 22 42 50"/></svg></div>
-            <div class="gallery-overlay"><span class="title">Hotel Courtyard</span><span class="meta">Commercial</span></div>
-          </button>
-
-          <button class="gallery-item fade-up" style="--delay:60ms" data-category="custom"      data-title="Curved Architectural"     data-tag="Project 05">
-            <div class="photo"><span class="photo-tag">Project 05</span><svg class="photo-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 18 56 18"/><path d="M12 18 12 50"/><path d="M52 18 52 50"/><path d="M22 22 22 50"/><path d="M32 22 32 50"/><path d="M42 22 42 50"/></svg></div>
-            <div class="gallery-overlay"><span class="title">Curved Architectural</span><span class="meta">Custom</span></div>
-          </button>
-
-          <button class="gallery-item fade-up" style="--delay:120ms" data-category="restaurant" data-title="Rooftop Bar"               data-tag="Project 06">
-            <div class="photo"><span class="photo-tag">Project 06</span><svg class="photo-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 18 56 18"/><path d="M12 18 12 50"/><path d="M52 18 52 50"/><path d="M22 22 22 50"/><path d="M32 22 32 50"/><path d="M42 22 42 50"/></svg></div>
-            <div class="gallery-overlay"><span class="title">Rooftop Bar</span><span class="meta">Restaurant</span></div>
-          </button>
-
-          <button class="gallery-item fade-up" data-category="residential" data-title="Garden Pavilion"           data-tag="Project 07">
-            <div class="photo"><span class="photo-tag">Project 07</span><svg class="photo-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 18 56 18"/><path d="M12 18 12 50"/><path d="M52 18 52 50"/><path d="M22 22 22 50"/><path d="M32 22 32 50"/><path d="M42 22 42 50"/></svg></div>
-            <div class="gallery-overlay"><span class="title">Garden Pavilion</span><span class="meta">Residential</span></div>
-          </button>
-
-          <button class="gallery-item fade-up" style="--delay:60ms" data-category="commercial"  data-title="Office Plaza Canopy"      data-tag="Project 08">
-            <div class="photo"><span class="photo-tag">Project 08</span><svg class="photo-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 18 56 18"/><path d="M12 18 12 50"/><path d="M52 18 52 50"/><path d="M22 22 22 50"/><path d="M32 22 32 50"/><path d="M42 22 42 50"/></svg></div>
-            <div class="gallery-overlay"><span class="title">Office Plaza Canopy</span><span class="meta">Commercial</span></div>
-          </button>
-
-          <button class="gallery-item fade-up" style="--delay:120ms" data-category="custom"     data-title="Vine-ready Trellis"       data-tag="Project 09">
-            <div class="photo"><span class="photo-tag">Project 09</span><svg class="photo-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 18 56 18"/><path d="M12 18 12 50"/><path d="M52 18 52 50"/><path d="M22 22 22 50"/><path d="M32 22 32 50"/><path d="M42 22 42 50"/></svg></div>
-            <div class="gallery-overlay"><span class="title">Vine-ready Trellis</span><span class="meta">Custom</span></div>
-          </button>
-
-          <button class="gallery-item fade-up" data-category="residential" data-title="Outdoor Kitchen"            data-tag="Project 10">
-            <div class="photo"><span class="photo-tag">Project 10</span><svg class="photo-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 18 56 18"/><path d="M12 18 12 50"/><path d="M52 18 52 50"/><path d="M22 22 22 50"/><path d="M32 22 32 50"/><path d="M42 22 42 50"/></svg></div>
-            <div class="gallery-overlay"><span class="title">Outdoor Kitchen</span><span class="meta">Residential</span></div>
-          </button>
-
-          <button class="gallery-item fade-up" style="--delay:60ms" data-category="restaurant" data-title="Sidewalk Cafe Extension"    data-tag="Project 11">
-            <div class="photo"><span class="photo-tag">Project 11</span><svg class="photo-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 18 56 18"/><path d="M12 18 12 50"/><path d="M52 18 52 50"/><path d="M22 22 22 50"/><path d="M32 22 32 50"/><path d="M42 22 42 50"/></svg></div>
-            <div class="gallery-overlay"><span class="title">Sidewalk Cafe Extension</span><span class="meta">Restaurant</span></div>
-          </button>
-
-          <button class="gallery-item fade-up" style="--delay:120ms" data-category="commercial" data-title="Vineyard Tasting Patio"   data-tag="Project 12">
-            <div class="photo"><span class="photo-tag">Project 12</span><svg class="photo-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 18 56 18"/><path d="M12 18 12 50"/><path d="M52 18 52 50"/><path d="M22 22 22 50"/><path d="M32 22 32 50"/><path d="M42 22 42 50"/></svg></div>
-            <div class="gallery-overlay"><span class="title">Vineyard Tasting Patio</span><span class="meta">Commercial</span></div>
-          </button>
-
-        </div>
-
       </div>
     </section>
 
@@ -154,8 +83,8 @@
       <div class="container">
         <div class="cta-banner fade-up">
           <div>
-            <h2>See something you like?</h2>
-            <p>Tell us about your space and we'll send a free design concept and quote within {{ QUOTE_TURNAROUND }} business days.</p>
+            <h2>Planning a project?</h2>
+            <p>Preview CTA — swap timing and phone placeholders when quotes go live.</p>
           </div>
           <div class="cta-actions">
             <a class="btn btn-accent btn-lg" href="contact.html">Request a Free Quote</a>
@@ -165,25 +94,6 @@
       </div>
     </section>
   </main>
-
-  <!-- ======================= LIGHTBOX ======================= -->
-  <div class="lightbox" aria-hidden="true" role="dialog" aria-label="Project preview">
-    <button class="lightbox-close" aria-label="Close">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6 18 18"/><path d="M18 6 6 18"/></svg>
-    </button>
-    <button class="lightbox-btn lightbox-prev" aria-label="Previous">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6 9 12 15 18"/></svg>
-    </button>
-    <button class="lightbox-btn lightbox-next" aria-label="Next">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 15 12 9 18"/></svg>
-    </button>
-    <figure class="lightbox-figure">
-      <figcaption class="lightbox-caption">
-        <span class="title">Project</span>
-        <span class="meta">Category</span>
-      </figcaption>
-    </figure>
-  </div>
 
   <!-- ======================= FOOTER ======================= -->
   <footer class="site-footer">
@@ -196,7 +106,7 @@
             </svg>
             <span>LifesBetterOutdoors</span>
           </a>
-          <p>Custom pergola design, sales, and installation for homes and businesses.</p>
+          <p>Preview build — LifesBetterOutdoors pergola design, sales, and installation.</p>
         </div>
         <div>
           <h4>Explore</h4>

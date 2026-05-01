@@ -73,6 +73,7 @@
   if (galleryGrid) {
     const filters = document.querySelectorAll('.gallery-filter');
     const items = galleryGrid.querySelectorAll('.gallery-item');
+    if (!items.length) return;
 
     // Filtering
     filters.forEach(btn => {
