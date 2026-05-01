@@ -4,9 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="js/auth-gate.js"></script>
-  <title>Contact — LifesBetterOutdoors</title>
-  <meta name="description" content="Consult LifesBetterOutdoors for motorized pergolas, timber builds, awnings, and turnkey installation — preview until contact fields finalize." />
+  <title>Contact — LifesBetterOutdoors (preview)</title>
+  <meta name="description" content="Website preview — contact merge tags fill in after LifesBetterOutdoors confirms phone, hours, and service area." />
   <meta name="theme-color" content="#F4F7F5" />
+
+  <meta property="og:title" content="Contact — LifesBetterOutdoors (preview)" />
+  <meta property="og:description" content="Contact preview — merge tags for phone, hours, area, financing." />
+  <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,9 +19,8 @@
 </head>
 <body>
 
-  <p class="preview-banner" role="status"><strong>Client preview.</strong> Layout and structure only — final copy, photos, service area, and business details will be added after LifesBetterOutdoors provides materials.</p>
+  <p class="preview-banner" role="status"><strong>Client preview.</strong> Nothing here claims final products, service area, or capabilities — those details will be filled in after LifesBetterOutdoors confirms them.</p>
 
-  <!-- ======================= HEADER ======================= -->
   <header class="site-header">
     <div class="container nav">
       <a href="index.html" class="brand" aria-label="LifesBetterOutdoors home">
@@ -35,7 +38,7 @@
         </ul>
       </nav>
       <div class="nav-cta">
-        <a class="btn btn-primary" href="#quote-form">Schedule Consultation</a>
+        <a class="btn btn-primary" href="#quote-form">Get in touch</a>
         <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <span></span><span></span><span></span>
         </button>
@@ -46,29 +49,25 @@
       <a href="gallery.html">Gallery</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
-      <a class="btn btn-primary" href="#quote-form">Schedule Consultation</a>
+      <a class="btn btn-primary" href="#quote-form">Get in touch</a>
     </div>
   </header>
 
   <main>
 
-    <!-- ======================= PAGE HERO ======================= -->
     <section class="page-hero">
       <div class="container">
         <span class="eyebrow fade-up">Contact</span>
-        <h1 class="fade-up" style="--delay: 60ms;">Consultations, demos & quotes.</h1>
+        <h1 class="fade-up" style="--delay: 60ms;">Reach out — details follow intake.</h1>
         <p class="fade-up" style="--delay: 120ms;">
-          Mirror premium dealers: schedule a call or site visit, walk samples on request, then receive structured quotes with realistic lead times.
-          Phone, email, hours, financing notes, and references finalize once LifesBetterOutdoors supplies them — placeholders remain below for now.
+          This is a preview layout: phone, hours, address lines, service area copy, and financing notes stay as merge tags until LifesBetterOutdoors confirms them — after we gather details from LifesBetterOutdoors.
         </p>
       </div>
     </section>
 
-    <!-- ======================= CONTACT INFO + FORM ======================= -->
     <section class="section">
       <div class="container contact-grid">
 
-        <!-- Contact info column -->
         <div class="fade-up">
           <ul class="info-list">
             <li class="info-item">
@@ -96,7 +95,7 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-7.5 7-12a7 7 0 1 0-14 0c0 4.5 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
               </span>
               <div>
-                <span class="label">Showroom & Office</span>
+                <span class="label">Office / showroom</span>
                 <span class="val">{{ ADDRESS_LINE_1 }}</span><br />
                 <span class="val" style="font-size: var(--fs-14); font-weight: 400; color: var(--color-ink-soft);">{{ ADDRESS_LINE_2 }}</span>
               </div>
@@ -122,7 +121,7 @@
               </span>
               <div>
                 <span class="label">Service area</span>
-                <span class="val" style="font-size: var(--fs-16); font-weight: 400; color: var(--color-ink-soft);">Coverage — pending LifesBetterOutdoors confirmation (replace {{ SERVICE_AREA }}).</span>
+                <span class="val" style="font-size: var(--fs-16); font-weight: 400; color: var(--color-ink-soft);">{{ SERVICE_AREA }}</span>
               </div>
             </li>
 
@@ -142,12 +141,11 @@
           </div>
         </div>
 
-        <!-- Form column -->
         <div class="fade-up" style="--delay: 80ms;" id="quote-form">
           <h2 style="font-size: var(--fs-32); margin-bottom: var(--sp-6);">Request a quote</h2>
 
           <div class="form-success" role="status" aria-live="polite">
-            <strong>Thanks — we got it.</strong> We'll reply within {{ RESPONSE_TIME }} business hours.
+            <strong>Thanks — we got it.</strong> We&apos;ll reply within {{ RESPONSE_TIME }} business hours.
           </div>
 
           <!--
@@ -189,11 +187,7 @@
                 <label>Project type <span class="req">*</span></label>
                 <div class="chips" role="radiogroup" aria-label="Project type">
                   <label class="chip"><input type="radio" name="projectType" value="Residential" required /> Residential</label>
-                  <label class="chip"><input type="radio" name="projectType" value="Restaurant" /> Restaurant</label>
                   <label class="chip"><input type="radio" name="projectType" value="Commercial" /> Commercial</label>
-                  <label class="chip"><input type="radio" name="projectType" value="Motorized pergola" /> Motorized pergola</label>
-                  <label class="chip"><input type="radio" name="projectType" value="Awnings" /> Awnings</label>
-                  <label class="chip"><input type="radio" name="projectType" value="Custom" /> Custom</label>
                   <label class="chip"><input type="radio" name="projectType" value="Not sure" /> Not sure</label>
                 </div>
               </div>
@@ -225,10 +219,9 @@
 
               <div class="field field-full">
                 <label for="f-message">Tell us about your project <span class="req">*</span></label>
-                <textarea id="f-message" name="message" rows="5" placeholder="Size of the space, materials you like, photos you've seen, anything else we should know."></textarea>
+                <textarea id="f-message" name="message" rows="5" placeholder="Scope, timing, references — whatever helps once fields are finalized." required></textarea>
               </div>
 
-              <!-- Honeypot anti-spam (hidden from users) -->
               <div class="field" aria-hidden="true" style="position:absolute; left:-9999px; height:0; overflow:hidden;">
                 <label for="f-hp">Don't fill this</label>
                 <input type="text" id="f-hp" name="_gotcha" tabindex="-1" autocomplete="off" />
@@ -238,7 +231,7 @@
             <div class="form-actions">
               <button type="submit" class="btn btn-accent btn-lg">Send my request</button>
               <span style="font-size: var(--fs-14); color: var(--color-muted);">
-                Or call us at <a href="tel:{{ PHONE_E164 }}" style="color: var(--color-ink); font-weight: 500;">{{ PHONE_DISPLAY }}</a>
+                Or call <a href="tel:{{ PHONE_E164 }}" style="color: var(--color-ink); font-weight: 500;">{{ PHONE_DISPLAY }}</a>
               </span>
             </div>
           </form>
@@ -249,7 +242,6 @@
 
   </main>
 
-  <!-- ======================= FOOTER ======================= -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -260,7 +252,7 @@
             </svg>
             <span>LifesBetterOutdoors</span>
           </a>
-          <p>Pergolas, motorized roofs & awnings — design through installation.</p>
+          <p>Website preview — details TBD with client.</p>
         </div>
         <div>
           <h4>Explore</h4>
@@ -272,12 +264,9 @@
           </ul>
         </div>
         <div>
-          <h4>Services</h4>
+          <h4>More</h4>
           <ul>
-            <li><a href="services.html#applications">Residential & commercial</a></li>
-            <li><a href="services.html#systems">Motorized & timber systems</a></li>
-            <li><a href="services.html#systems">Pergolas & awnings</a></li>
-            <li><a href="services.html#partners">Manufacturers & partners</a></li>
+            <li><a href="services.html">Services overview</a></li>
           </ul>
         </div>
         <div>
