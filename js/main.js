@@ -40,7 +40,7 @@
     });
     mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 880) closeMenu();
+      if (window.innerWidth > 1024) closeMenu();
     });
   }
 
