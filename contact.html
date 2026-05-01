@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="js/auth-gate.js"></script>
   <title>Contact — LifesBetterOutdoors</title>
-  <meta name="description" content="Contact preview — request a quote once LifesBetterOutdoors confirms phone, email, and reply workflow." />
+  <meta name="description" content="Consult LifesBetterOutdoors for motorized pergolas, timber builds, umbrellas, awnings, and turnkey installation — preview until contact fields finalize." />
   <meta name="theme-color" content="#F4F7F5" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,7 +35,7 @@
         </ul>
       </nav>
       <div class="nav-cta">
-        <a class="btn btn-primary" href="#quote-form">Get a Free Quote</a>
+        <a class="btn btn-primary" href="#quote-form">Schedule Consultation</a>
         <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <span></span><span></span><span></span>
         </button>
@@ -46,7 +46,7 @@
       <a href="gallery.html">Gallery</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
-      <a class="btn btn-primary" href="#quote-form">Get a Free Quote</a>
+      <a class="btn btn-primary" href="#quote-form">Schedule Consultation</a>
     </div>
   </header>
 
@@ -56,10 +56,10 @@
     <section class="page-hero">
       <div class="container">
         <span class="eyebrow fade-up">Contact</span>
-        <h1 class="fade-up" style="--delay: 60ms;">Tell us about your project.</h1>
+        <h1 class="fade-up" style="--delay: 60ms;">Consultations, demos & quotes.</h1>
         <p class="fade-up" style="--delay: 120ms;">
-          Preview contact layout — merge tags stay until LifesBetterOutdoors confirms phone, email, hours, and reply expectations.
-          We'll respond within {{ RESPONSE_TIME }} business hours once those fields are live.
+          Mirror premium dealers: schedule a call or site visit, walk samples on request, then receive structured quotes with realistic lead times.
+          Phone, email, hours, financing notes, and references finalize once LifesBetterOutdoors supplies them — placeholders remain below for now.
         </p>
       </div>
     </section>
@@ -125,6 +125,16 @@
                 <span class="val" style="font-size: var(--fs-16); font-weight: 400; color: var(--color-ink-soft);">Coverage — pending LifesBetterOutdoors confirmation (replace {{ SERVICE_AREA }}).</span>
               </div>
             </li>
+
+            <li class="info-item">
+              <span class="icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h10"/><path d="M7 14h6"/></svg>
+              </span>
+              <div>
+                <span class="label">Financing</span>
+                <span class="val" style="font-size: var(--fs-16); font-weight: 400; color: var(--color-ink-soft);">{{ FINANCING_MESSAGE }}</span>
+              </div>
+            </li>
           </ul>
 
           <div class="map-placeholder" style="margin-top: var(--sp-8);" aria-label="Map placeholder">
@@ -134,7 +144,7 @@
 
         <!-- Form column -->
         <div class="fade-up" style="--delay: 80ms;" id="quote-form">
-          <h2 style="font-size: var(--fs-32); margin-bottom: var(--sp-6);">Request a free quote</h2>
+          <h2 style="font-size: var(--fs-32); margin-bottom: var(--sp-6);">Request a quote</h2>
 
           <div class="form-success" role="status" aria-live="polite">
             <strong>Thanks — we got it.</strong> We'll reply within {{ RESPONSE_TIME }} business hours.
@@ -181,6 +191,8 @@
                   <label class="chip"><input type="radio" name="projectType" value="Residential" required /> Residential</label>
                   <label class="chip"><input type="radio" name="projectType" value="Restaurant" /> Restaurant</label>
                   <label class="chip"><input type="radio" name="projectType" value="Commercial" /> Commercial</label>
+                  <label class="chip"><input type="radio" name="projectType" value="Motorized pergola" /> Motorized pergola</label>
+                  <label class="chip"><input type="radio" name="projectType" value="Umbrellas or awnings" /> Umbrellas / awnings</label>
                   <label class="chip"><input type="radio" name="projectType" value="Custom" /> Custom</label>
                   <label class="chip"><input type="radio" name="projectType" value="Not sure" /> Not sure</label>
                 </div>
@@ -248,7 +260,7 @@
             </svg>
             <span>LifesBetterOutdoors</span>
           </a>
-          <p>Preview build — LifesBetterOutdoors pergola design, sales, and installation.</p>
+          <p>Pergolas, motorized roofs, umbrellas & awnings — design through installation.</p>
         </div>
         <div>
           <h4>Explore</h4>
@@ -262,10 +274,10 @@
         <div>
           <h4>Services</h4>
           <ul>
-            <li><a href="services.html">Residential</a></li>
-            <li><a href="services.html">Restaurants</a></li>
-            <li><a href="services.html">Commercial</a></li>
-            <li><a href="services.html">Custom Design</a></li>
+            <li><a href="services.html#applications">Residential & commercial</a></li>
+            <li><a href="services.html#systems">Motorized & timber systems</a></li>
+            <li><a href="services.html#systems">Umbrellas & awnings</a></li>
+            <li><a href="services.html#partners">Manufacturers & partners</a></li>
           </ul>
         </div>
         <div>
