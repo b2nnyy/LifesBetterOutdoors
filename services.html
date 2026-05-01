@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services — LifesBetterOutdoors</title>
+  <meta name="description" content="Pergola design, fabrication, and installation services from LifesBetterOutdoors." />
+  <meta name="theme-color" content="#FBFAF7" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ======================= HEADER ======================= -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="LifesBetterOutdoors home">
+        <svg class="brand-mark" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <path d="M3 7 L25 7" /><path d="M3 10 L25 10" /><path d="M5 7 L5 24" /><path d="M23 7 L23 24" /><path d="M9 10 L9 24" /><path d="M14 10 L14 24" /><path d="M19 10 L19 24" />
+        </svg>
+        <span>LifesBetterOutdoors</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html" data-nav="index.html">Home</a></li>
+          <li><a href="gallery.html" data-nav="gallery.html">Gallery</a></li>
+          <li><a href="services.html" data-nav="services.html">Services</a></li>
+          <li><a href="contact.html" data-nav="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-primary" href="contact.html">Get a Free Quote</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-primary" href="contact.html">Get a Free Quote</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ======================= PAGE HERO ======================= -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow fade-up">Services</span>
+        <h1 class="fade-up" style="--delay: 60ms;">From design to install — handled.</h1>
+        <p class="fade-up" style="--delay: 120ms;">
+          We offer end-to-end pergola services for homeowners, restaurants, and commercial properties.
+          One team. One point of contact. One beautiful structure.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================= SERVICES LIST ======================= -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+
+          <article class="service-card fade-up">
+            <div class="photo">
+              <span class="photo-tag">Residential</span>
+              <svg class="photo-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 18 56 18"/><path d="M12 18 12 50"/><path d="M52 18 52 50"/><path d="M22 22 22 50"/><path d="M32 22 32 50"/><path d="M42 22 42 50"/></svg>
+            </div>
+            <div class="service-card-body">
+              <h3>Residential Pergolas</h3>
+              <p>Backyard pergolas, patio covers, pool-side shade, garden pavilions, and outdoor kitchens.
+                 Built for the way your family actually uses your yard.</p>
+              <p style="margin-top: var(--sp-3);"><strong>Typical timeline:</strong> {{ RESIDENTIAL_TIMELINE }}<br/>
+                 <strong>Starting at:</strong> {{ RESIDENTIAL_START_PRICE }}</p>
+              <a class="more" href="contact.html">Start a residential project →</a>
+            </div>
+          </article>
+
+          <article class="service-card fade-up" style="--delay: 80ms;">
+            <div class="photo">
+              <span class="photo-tag">Restaurants</span>
+              <svg class="photo-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 18 56 18"/><path d="M12 18 12 50"/><path d="M52 18 52 50"/><path d="M22 22 22 50"/><path d="M32 22 32 50"/><path d="M42 22 42 50"/></svg>
+            </div>
+            <div class="service-card-body">
+              <h3>Restaurant Patios</h3>
+              <p>Extend your dining room, add seats, and stretch your season. Engineered for commercial code,
+                 retractable canopies, integrated lighting, and heating.</p>
+              <p style="margin-top: var(--sp-3);"><strong>Typical timeline:</strong> {{ RESTAURANT_TIMELINE }}<br/>
+                 <strong>Starting at:</strong> {{ RESTAURANT_START_PRICE }}</p>
+              <a class="more" href="contact.html">Plan a restaurant patio →</a>
+            </div>
+          </article>
+
+          <article class="service-card fade-up">
+            <div class="photo">
+              <span class="photo-tag">Commercial</span>
+              <svg class="photo-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 18 56 18"/><path d="M12 18 12 50"/><path d="M52 18 52 50"/><path d="M22 22 22 50"/><path d="M32 22 32 50"/><path d="M42 22 42 50"/></svg>
+            </div>
+            <div class="service-card-body">
+              <h3>Commercial Installations</h3>
+              <p>Hotels, vineyards, retail courtyards, office plazas, event venues. Large-format structures
+                 with engineered drawings, sealed by a licensed engineer where required.</p>
+              <p style="margin-top: var(--sp-3);"><strong>Typical timeline:</strong> {{ COMMERCIAL_TIMELINE }}<br/>
+                 <strong>Starting at:</strong> Quoted per project</p>
+              <a class="more" href="contact.html">Discuss a commercial project →</a>
+            </div>
+          </article>
+
+          <article class="service-card fade-up" style="--delay: 80ms;">
+            <div class="photo">
+              <span class="photo-tag">Custom</span>
+              <svg class="photo-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 18 56 18"/><path d="M12 18 12 50"/><path d="M52 18 52 50"/><path d="M22 22 22 50"/><path d="M32 22 32 50"/><path d="M42 22 42 50"/></svg>
+            </div>
+            <div class="service-card-body">
+              <h3>Custom Design</h3>
+              <p>Curved roofs, vine-ready trellises, multi-level structures, integrated screens.
+                 If you can sketch it, we can design and engineer it.</p>
+              <p style="margin-top: var(--sp-3);"><strong>Typical timeline:</strong> {{ CUSTOM_TIMELINE }}<br/>
+                 <strong>Starting at:</strong> Quoted per project</p>
+              <a class="more" href="contact.html">Talk through a custom design →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= PROCESS ======================= -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head fade-up">
+          <span class="eyebrow">Our process</span>
+          <h2>How we work — from first call to first dinner under the lights.</h2>
+        </div>
+
+        <div class="steps">
+          <div class="step fade-up">
+            <span class="step-num">01</span>
+            <div>
+              <h3>Discovery call</h3>
+              <p>We start with a {{ DISCOVERY_DURATION }}-minute call to understand your space, your style,
+                 and how you plan to use it. No commitment. No pressure.</p>
+            </div>
+          </div>
+          <div class="step fade-up" style="--delay: 60ms;">
+            <span class="step-num">02</span>
+            <div>
+              <h3>On-site visit & measurement</h3>
+              <p>One of our designers visits your property to measure, photograph, and study sun angles,
+                 grade, and drainage — the details that make a pergola feel built-in instead of bolted-on.</p>
+            </div>
+          </div>
+          <div class="step fade-up" style="--delay: 120ms;">
+            <span class="step-num">03</span>
+            <div>
+              <h3>Design concept & quote</h3>
+              <p>You'll receive a 3D rendering, material options, and a clear, line-itemed quote within
+                 {{ QUOTE_TURNAROUND }} business days. We refine until it's right.</p>
+            </div>
+          </div>
+          <div class="step fade-up" style="--delay: 180ms;">
+            <span class="step-num">04</span>
+            <div>
+              <h3>Permits & engineering</h3>
+              <p>We pull permits, submit engineered drawings where required, and coordinate with HOAs.
+                 You stay informed without doing the paperwork.</p>
+            </div>
+          </div>
+          <div class="step fade-up" style="--delay: 240ms;">
+            <span class="step-num">05</span>
+            <div>
+              <h3>Build & install</h3>
+              <p>Our crew installs on your property with a clean, respectful site. Most residential builds
+                 are completed in {{ INSTALL_DAYS }} days; commercial projects on a posted schedule.</p>
+            </div>
+          </div>
+          <div class="step fade-up" style="--delay: 300ms;">
+            <span class="step-num">06</span>
+            <div>
+              <h3>Walk-through & warranty</h3>
+              <p>We walk you through your finished pergola, answer questions, and hand off your
+                 {{ WARRANTY }}-year written workmanship warranty.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= MATERIALS ======================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head fade-up text-center mx-auto">
+          <span class="eyebrow">Materials & finishes</span>
+          <h2>Pick the look. We handle the engineering.</h2>
+          <p class="lead">Every material we use is selected to perform in your climate and last for decades.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card fade-up">
+            <h3>Western Red Cedar</h3>
+            <p>Warm, natural grain. Naturally rot-resistant. Best for traditional and rustic looks.</p>
+          </div>
+          <div class="card fade-up" style="--delay: 60ms;">
+            <h3>Redwood</h3>
+            <p>Rich color. Dimensionally stable. A premium choice for show-piece backyards.</p>
+          </div>
+          <div class="card fade-up" style="--delay: 120ms;">
+            <h3>Powder-coated Steel</h3>
+            <p>Slim profiles, big spans. Modern look. Perfect for restaurants and contemporary homes.</p>
+          </div>
+          <div class="card fade-up" style="--delay: 180ms;">
+            <h3>Architectural Aluminum</h3>
+            <p>Louvered roofs, motorized vents, integrated lighting. Low maintenance. All-weather.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= CTA BANNER ======================= -->
+    <section class="section-tight">
+      <div class="container">
+        <div class="cta-banner fade-up">
+          <div>
+            <h2>Tell us about your project.</h2>
+            <p>A quick form, a free design concept, and a real quote — usually within {{ QUOTE_TURNAROUND }} business days.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-accent btn-lg" href="contact.html">Request a Free Quote</a>
+            <a class="btn btn-outline btn-lg" href="tel:{{ PHONE_E164 }}" style="border-color: rgba(255,255,255,0.3); color: #fff;">Call {{ PHONE_DISPLAY }}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand" aria-label="LifesBetterOutdoors home">
+            <svg class="brand-mark" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+              <path d="M3 7 L25 7" /><path d="M3 10 L25 10" /><path d="M5 7 L5 24" /><path d="M23 7 L23 24" /><path d="M9 10 L9 24" /><path d="M14 10 L14 24" /><path d="M19 10 L19 24" />
+            </svg>
+            <span>LifesBetterOutdoors</span>
+          </a>
+          <p>Custom pergola design, sales, and installation for homes and businesses.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Residential</a></li>
+            <li><a href="services.html">Restaurants</a></li>
+            <li><a href="services.html">Commercial</a></li>
+            <li><a href="services.html">Custom Design</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:{{ PHONE_E164 }}">{{ PHONE_DISPLAY }}</a></li>
+            <li><a href="mailto:{{ EMAIL }}">{{ EMAIL }}</a></li>
+            <li>{{ ADDRESS_LINE_1 }}</li>
+            <li>{{ ADDRESS_LINE_2 }}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> LifesBetterOutdoors. All rights reserved.</span>
+        <span>{{ LICENSE_INFO_OPTIONAL }}</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
