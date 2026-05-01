@@ -1,6 +1,6 @@
 /* ==========================================================================
    LifesBetterOutdoors — Design System
-   System UI fonts (no webfont loading)
+   Inter (Google Fonts) site-wide with system-ui fallback
    ========================================================================== */
 
 /* -----------------------------------------------
@@ -22,9 +22,9 @@
   --color-success:      #25603A;
   --color-error:        #B43B2C;
 
-  /* Typography — native stack reads like normal UI text everywhere */
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* Typography — Inter everywhere */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-serif: var(--font-sans);
 
   --fs-12: 0.75rem;
